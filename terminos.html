@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Términos y condiciones · Mi Tienda Digital</title>
+<meta name="description" content="Términos y condiciones de uso de Mi Tienda Digital (KEVANIX).">
+<meta property="og:title" content="Términos y condiciones · Mi Tienda Digital">
+<meta property="og:image" content="https://catalogo.kevanix.com/og.png">
+<link rel="stylesheet" href="legal.css">
+</head>
+<body>
+<header><a href="./" class="marca"><span class="ico">M</span> Mi Tienda Digital</a></header>
+<main>
+<h1>Términos y condiciones</h1>
+<p class="fecha">Última actualización: 28 de octubre de 2026</p>
+
+<h2>1. El servicio</h2>
+<p><b>Mi Tienda Digital</b>, de <b>KEVANIX</b>, es una plataforma para que los negocios publiquen un catálogo online y reciban pedidos por WhatsApp. KEVANIX no vende los productos de las tiendas: cada tienda es un negocio independiente.</p>
+
+<h2>2. Para las tiendas</h2>
+<ul>
+  <li><b>Cuenta</b>: sos responsable de cuidar tu usuario y tu contraseña, y de lo que hagan los empleados a los que des acceso.</li>
+  <li><b>Contenido</b>: los productos, fotos, precios, stock, promociones y textos que publiques son tu responsabilidad. No se permiten productos ilegales, falsificados ni contenido de terceros sin autorización.</li>
+  <li><b>Ventas</b>: la atención, el cobro, la entrega, las garantías, los cambios y las devoluciones son una relación directa entre la tienda y su cliente. También lo es la factura, cuando corresponda.</li>
+  <li><b>Membresía</b>:
+    <ul>
+      <li>El servicio se paga según el plan elegido (mensual, anual o pago único).</li>
+      <li>Si la membresía vence, el catálogo deja de mostrarse hasta que se renueve. Tus datos se conservan.</li>
+      <li>La prueba gratis dura los días indicados al registrarte.</li>
+    </ul>
+  </li>
+  <li><b>Datos de clientes</b>: usá los datos de tus clientes solo para atender sus pedidos y comunicarte con ellos sobre tu negocio, respetando nuestra <a href="privacidad.html">política de privacidad</a>.</li>
+  <li><b>Límites</b>: cada plan tiene un máximo de productos. KEVANIX puede suspender cuentas que incumplan estos términos o que no paguen la membresía.</li>
+</ul>
+
+<h2>3. Para los clientes</h2>
+<ul>
+  <li>Al enviar un pedido, se abre WhatsApp con el detalle para que lo mandes a la tienda. El pedido queda confirmado cuando la tienda te responde.</li>
+  <li>Los precios, el stock, las promociones y los costos de envío los define cada tienda, y pueden cambiar.</li>
+  <li>En otras monedas, el precio que ves es una referencia: el cobro se hace en la moneda de la tienda.</li>
+  <li>El envío por distancia y los tiempos estimados son aproximados.</li>
+  <li>Los puntos de fidelidad y los cupones son beneficios de cada tienda, que fija sus condiciones.</li>
+  <li>Las opiniones deben ser reales y respetuosas. La tienda puede ocultarlas.</li>
+</ul>
+
+<h2>4. Disponibilidad y responsabilidad</h2>
+<p>Trabajamos para que el servicio funcione siempre, pero puede haber interrupciones por mantenimiento o por fallas de proveedores (internet, Google, WhatsApp, etc.). En la medida que lo permita la ley, KEVANIX no responde por pérdidas derivadas de esas interrupciones, ni por los productos, entregas o pagos entre tiendas y clientes.</p>
+
+<h2>5. Propiedad</h2>
+<p>La plataforma, la app y su diseño son de KEVANIX. Cada tienda conserva los derechos sobre su marca, sus fotos y sus textos, y nos permite mostrarlos para prestar el servicio.</p>
+
+<h2>6. Cambios y ley aplicable</h2>
+<p>Podemos actualizar estos términos y publicaremos la versión vigente en esta página. Se rigen por las leyes de la República del Paraguay.</p>
+
+<h2>7. Contacto</h2>
+<p>KEVANIX · Paraguay<br><span id="contacto">Escribinos por WhatsApp de soporte.</span></p>
+<p class="links"><a href="privacidad.html">Política de privacidad</a></p>
+</main>
+<script>
+fetch('https://firestore.googleapis.com/v1/projects/kevanix-catalogo/databases/(default)/documents/ajustes/global')
+  .then(r => r.json()).then(d => { const w = d.fields?.whatsappVendedor?.stringValue; if (w) document.getElementById('contacto').innerHTML = 'WhatsApp de soporte: <a href="https://wa.me/' + w.replace(/\D/g, '') + '">+' + w.replace(/\D/g, '') + '</a>'; }).catch(() => {});
+</script>
+</body>
+</html>

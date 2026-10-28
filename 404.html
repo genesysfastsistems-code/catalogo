@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mi Tienda Digital</title>
+<meta property="og:title" content="Mi Tienda Digital"><meta property="og:description" content="Catálogo online · Pedidos por WhatsApp"><meta property="og:image" content="https://catalogo.kevanix.com/og.png">
+<script>
+  // Links lindos /t/ID → catálogo (para tiendas nuevas que todavía no tienen su página de vista previa)
+  var m = location.pathname.match(/\/t\/([^\/]+)/);
+  location.replace(m ? '/?t=' + m[1] + location.search.replace(/^\?/, '&') : '/');
+</script></head><body></body></html>
